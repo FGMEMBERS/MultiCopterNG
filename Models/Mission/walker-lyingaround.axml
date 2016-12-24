@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+<path>walker-lyingaround.ac</path>
+  
+ <!-- <animation>
+    <type>pick</type>
+<object-name>2leg1.R</object-name>
+<object-name>2leg1.L</object-name>
+<object-name>2leg2.R</object-name>
+<object-name>2leg2.L</object-name>
+<object-name>2foot.R</object-name>
+<object-name>2foot.L</object-name>
+<object-name>2hand.R</object-name>
+<object-name>2point.L</object-name>
+<object-name>2arm1.R</object-name>
+<object-name>2arm1.L</object-name>
+<object-name>2arm2.R</object-name>
+<object-name>2arm2.L</object-name>
+<object-name>2chest</object-name>
+<object-name>2collar</object-name>
+<object-name>2chest.002</object-name>
+<object-name>2hip</object-name>
+<object-name>2hip.003</object-name>
+<object-name>2head</object-name>
+<object-name>2hair</object-name>
+<object-name>2eyes</object-name>
+<object-name>2belt</object-name>
+<object-name>2buckle</object-name>
+<action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/mission/walker-inside</property>
+      </binding>
+    </action>
+  </animation>-->
+
+  <!--<animation>
+    <type>select</type>
+<object-name>2leg1.R</object-name>
+<object-name>2leg1.L</object-name>
+<object-name>2leg2.R</object-name>
+<object-name>2leg2.L</object-name>
+<object-name>2foot.R</object-name>
+<object-name>2foot.L</object-name>
+<object-name>2hand.R</object-name>
+<object-name>2point.L</object-name>
+<object-name>2arm1.R</object-name>
+<object-name>2arm1.L</object-name>
+<object-name>2arm2.R</object-name>
+<object-name>2arm2.L</object-name>
+<object-name>2chest</object-name>
+<object-name>2collar</object-name>
+<object-name>2chest.002</object-name>
+<object-name>2hip</object-name>
+<object-name>2hip.003</object-name>
+<object-name>2head</object-name>
+<object-name>2hair</object-name>
+<object-name>2eyes</object-name>
+<object-name>2belt</object-name>
+<object-name>2buckle</object-name>
+<condition>
+<not>
+        <property>/sim/mission/walker-inside</property>
+</not>
+</condition>
+  </animation>-->
+
+ </PropertyList>

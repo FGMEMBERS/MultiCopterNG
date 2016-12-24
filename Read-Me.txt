@@ -1,0 +1,15 @@
+This is the EchoAir MultiCopter, an 16-rotor helicopter, primary for medical and rescue missions.
+#
+This aircraft is based on the R44 by helijah, thanks to him
+#
+The FDM is exactly the one from the R44 by helijah, will be worked on soon.
+#
+RPM warning, rotor, "explosion", "flotteur", wind and overspeed sounds are taken from the R44 and made by "Baboon" (see Sounds/BaBoOn-R44-Sounds.html).
+#
+The bumpspec and glass effect has been taken from the ec135 and adapted.
+
+###
+HAVE FUN!
+###
+
+

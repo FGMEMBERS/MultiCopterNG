@@ -1,0 +1,265 @@
+<PropertyList>
+
+  <name>Skiing accident near Innsbruck</name>
+  <description>
+	A skiing accident happend on the Patscherkofel near Innsbruck. You will get directions from a controller. After landing next to the skier, click on him to bring him into your aircraft and fly him to the central hospital of Innsbruck, a controller will guide you again.
+  </description>
+  <timeofday>noon</timeofday>
+<enviroment>
+  <season>winter</season>
+</enviroment>
+  <presets>
+    <airport-id>LOWI</airport-id>
+    <on-ground>1</on-ground>
+    <runway>H1</runway>
+  </presets>
+  
+  <models>
+	<model>
+		<path>Aircraft/MultiCopter/Models/Mission/walker-lyingaround.xml</path>
+		<longitude-deg>11.45193712</longitude-deg>
+		<latitude-deg>47.20996438</latitude-deg>
+		<elevation-ft>6443.557047</elevation-ft>
+		<heading-deg>0</heading-deg>
+		<pitch-deg>0</pitch-deg>
+		<roll-deg>0</roll-deg>
+	</model>
+  </models>
+  <targets>
+	<injured>
+		<longitude-deg>11.45193712</longitude-deg>
+		<latitude-deg>47.20996438</latitude-deg>
+	</injured>
+	<hospital>
+		<longitude-deg>11.385025</longitude-deg>
+		<latitude-deg>47.260982</latitude-deg>
+	</hospital>
+  </targets>
+  
+ <step>
+	<message>Please check that you have installed the LOWI custom scenery (see forum post of this aircraft for more infos). If you've got it, go on!</message>
+  </step>
+ <step>
+	<message>Check heading indicator and altimeter.</message>
+  </step>
+
+ <step>
+	<message>Start your engines.</message>
+  </step>
+  <step>
+	<message></message>
+	<error>
+			<condition>
+				<less-than>
+					<property>/engines/engine/rpm</property>
+					<value>2000</value>
+				</less-than>
+			</condition>
+	</error>
+	<exit>
+			<condition>
+				<greater-than>
+					<property>/engines/engine/rpm</property>
+					<value>2000</value>
+				</greater-than>
+			</condition>
+	</exit>
+  </step>
+
+ <step>
+	<message>ATC: Cleared for takeoff on H1 to Patscherkofel</message>
+  </step>
+  
+  <step>
+	<message>Controller: Fly on a heading of about 123 until you see a mountain with a station on it.</message>
+  </step>
+  <step>
+	<message></message>
+	<error>
+		<condition>
+			<greater-than>
+				<property>/sim/tutorials/targets/injured/distance-m</property>
+				<value>4500</value>
+			</greater-than>
+		</condition>
+	</error>
+	<exit>
+			<condition>
+				<less-than>
+					<property>/sim/tutorials/targets/injured/distance-m</property>
+					<value>4500</value>
+				</less-than>
+			</condition>
+	</exit>
+  </step>
+
+  <step>
+	<message>Controller: Fly at an altitude of 6500ft towards the mountain.</message>
+  </step>
+  <step>
+	<message></message>
+	<error>
+		<condition>
+			<greater-than>
+				<property>/sim/tutorials/targets/injured/distance-m</property>
+				<value>1300</value>
+			</greater-than>
+		</condition>
+	</error>
+	<exit>
+			<condition>
+				<less-than>
+					<property>/sim/tutorials/targets/injured/distance-m</property>
+					<value>1300</value>
+				</less-than>
+			</condition>
+	</exit>
+  </step>
+
+  <step>
+	<message>Controller: You should now have the house in sight, do you see it? Continue flying towards it</message>
+  </step>
+  <step>
+	<message></message>
+	<error>
+		<condition>
+			<greater-than>
+				<property>/sim/tutorials/targets/injured/distance-m</property>
+				<value>300</value>
+			</greater-than>
+		</condition>
+	</error>
+	<exit>
+			<condition>
+				<less-than>
+					<property>/sim/tutorials/targets/injured/distance-m</property>
+					<value>300</value>
+				</less-than>
+			</condition>
+	</exit>
+  </step>
+  <step>
+	<message>Fly some rounds around that house and look for a lying person</message>
+		<condition>
+			<less-than>
+				<property>/sim/tutorials/targets/injured/distance-m</property>
+				<value>200</value>
+			</less-than>
+		</condition>
+  </step>
+
+  <step>
+	<message>If you found it, land next to it.</message>
+  </step>
+  <step>
+	<message></message>
+	<error>
+		<condition>
+			<greater-than>
+				<property>/sim/tutorials/targets/injured/distance-m</property>
+				<value>100</value>
+			</greater-than>
+		</condition>
+	</error>
+	<exit>
+			<condition>
+				<less-than>
+					<property>/sim/tutorials/targets/injured/distance-m</property>
+					<value>100</value>
+				</less-than>
+			</condition>
+	</exit>
+  </step>
+
+  <step>
+	<message>Bring the injured person into your aircraft (click on it).</message>
+  </step>
+
+  <step>
+	<message></message>
+	<error>
+
+		<condition>
+<not>
+				<property>/sim/mission/walker-inside</property>
+</not>
+		</condition>
+	</error>
+	<exit>
+
+		<condition>
+				<property>/sim/mission/walker-inside</property>
+		</condition>
+	</exit>
+  </step>
+  <step>
+	<message>Fly to the hospital at a heading of 320.</message>
+  </step>
+  <step>
+	<message>You will find it next to the river Inn.</message>
+  </step>
+  <step>
+	<message></message>
+	<error>
+		<condition>
+			<greater-than>
+				<property>/sim/tutorials/targets/hospital/distance-m</property>
+				<value>1000</value>
+			</greater-than>
+		</condition>
+	</error>
+	<exit>
+			<condition>
+				<less-than>
+					<property>/sim/tutorials/targets/hospital/distance-m</property>
+					<value>1000</value>
+				</less-than>
+			</condition>
+	</exit>
+  </step>
+  <step>
+	<message>Land on the helipad</message>
+  </step>
+  <step>
+	<message></message>
+	<error>
+		<condition>
+			<greater-than>
+				<property>/sim/tutorials/targets/hospital/distance-m</property>
+				<value>100</value>
+			</greater-than>
+		</condition>
+	</error>
+	<exit>
+			<condition>
+				<less-than>
+					<property>/sim/tutorials/targets/hospital/distance-m</property>
+					<value>100</value>
+				</less-than>
+			</condition>
+	</exit>
+  </step>
+  <step>
+	<message>Bring the injured person into the hospital (click on it)</message>
+  </step>
+  <step>
+	<message></message>
+	<error>
+
+		<condition>
+<not>
+				<property>/sim/mission/walker-hospital</property>
+</not>
+		</condition>
+	</error>
+	<exit>
+
+		<condition>
+				<property>/sim/mission/walker-hospital</property>
+		</condition>
+	</exit>
+  </step>
+  <step>
+	<message>You have successfully finished your mission!</message>
+  </step>
+</PropertyList>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="multicopterNG-base.xml">
+
+  <sim>
+    <description>EchoAir MultiCopter NewGeneration</description>
+    <author>D-ECHO and more, see README.txt</author>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">multicopterNG</aero>
+
+    <status>early production</status>
+
+    <rating>
+      <FDM     type="int"> 0 </FDM>
+      <systems type="int"> 2 </systems>
+      <cockpit type="int"> 4 </cockpit>
+      <model   type="int"> 5 </model>
+    </rating>
+    
+    <startup>
+      <splash-texture>Aircraft/MultiCopterNG/splash.png</splash-texture>
+    </startup> 
+
+<tutorials include="Missions/multicoptermission.xml"/>
+    <sound>
+      <path>Sounds/sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/MultiCopterNG/Models/multicopterNG.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+      <multicopter>
+        <state type="int">0</state>
+        <engine type="float">0.0</engine>
+        <rotor-step-deg type="float">-1.0</rotor-step-deg>
+      </multicopter>
+    </model>
+  </sim>
+
+  <!-- ############################### -->
+  <!-- ######## DUAL CONTROL ######### -->
+  <!--<nasal>
+    <dual_control_tools>
+      <file>Aircraft/R44/Nasal/dual-control-tools.nas</file>
+    </dual_control_tools>
+    <aircraft_dual_control>
+      <file>Aircraft/R44/Nasal/raven-dual-control.nas</file>
+    </aircraft_dual_control>
+    <dual_control>
+      <file>Aircraft/R44/Nasal/pilot-dual-control.nas</file>
+    </dual_control>
+  </nasal>-->
+  <!-- ######## DUAL CONTROL ######### -->
+  <!-- ############################### -->
+
+</PropertyList>
